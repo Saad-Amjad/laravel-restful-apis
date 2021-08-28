@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Author extends Model
 {
@@ -23,8 +24,8 @@ class Author extends Model
     /**
      * Get the Book records associated with Author
      */
-    public function books()
+    public function books(): HasMany
     {
-        return $this->hasMany('App\Models\Book');
+        return $this->hasMany(Book::class);
     }
 }

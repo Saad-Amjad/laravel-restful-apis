@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\AuthorCollection;
 use App\Models\Author;
 
 class AuthorController extends Controller
@@ -13,6 +14,8 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        return Author::all();
+        /* @var Author $authors */
+        $authors = Author::with(['books'])->paginate(5);
+        return new AuthorCollection($authors);
     }
 }

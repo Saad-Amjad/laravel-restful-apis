@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\BookCollection;
 use App\Models\Book;
 
 class BookController extends Controller
@@ -13,6 +14,8 @@ class BookController extends Controller
      */
     public function index()
     {
-        return Book::all();
+        /* @var Book $books */
+        $books = Book::with(['author'])->paginate(5);
+        return new BookCollection($books);
     }
 }
