@@ -158,7 +158,7 @@
                         "title": "Title",
                         "description": "Name of the new book",
                         "type": "string",
-                        "example": "A nice project"
+                        "example": "Sample Book"
                     },
                     "created_at": {
                         "title": "Created at",
@@ -176,7 +176,7 @@
                     },
                     "author_id": {
                         "title": "Author ID",
-                        "description": "Author's id of the new project",
+                        "description": "Author's id of the new book",
                         "type": "integer",
                         "format": "int64",
                         "example": 1
@@ -249,7 +249,7 @@
                         "title": "password",
                         "description": "password",
                         "type": "string",
-                        "example": "#@asdf342f"
+                        "example": "password123"
                     }
                 },
                 "type": "object"

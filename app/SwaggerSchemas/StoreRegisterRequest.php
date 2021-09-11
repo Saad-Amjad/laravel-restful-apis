@@ -38,7 +38,7 @@ class StoreRegisterRequest
      * @OA\Property(
      *      title="password",
      *      description="password",
-     *      example="#@asdf342f"
+     *      example="password123"
      * )
      *
      * @var string

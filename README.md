@@ -42,56 +42,53 @@ Session 4
 
 Whimsical
 
-https://whimsical.com/restful-api-design-CjrjT2QFVfnrVfJxSCCSbW
-
-Password: web-dev-workshop
+- https://whimsical.com/restful-api-design-CjrjT2QFVfnrVfJxSCCSbW
 
 Local Playground:
 
-https://github.com/typicode/json-server
+- https://github.com/typicode/json-server
 
-Postman or Insomnia
+- Postman or Insomnia
 
 **Reading Materials**
 
 **API**
 
-https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces
-https://stoplight.io/api-types/
-Eg: https://api.ratings.food.gov.uk/Help/Index
-Eg: https://docs.github.com/en/rest
+- https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces
+- https://stoplight.io/api-types/
+- Eg: https://api.ratings.food.gov.uk/Help/Index
+- Eg: https://docs.github.com/en/rest
 
 **HTTP**
 
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
-https://www.freshblurbs.com/blog/2013/12/03/web-hypermedia-apis-node.html
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+- https://www.freshblurbs.com/blog/2013/12/03/web-hypermedia-apis-node.html
 
 **REST**
 
-https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
-https://restfulapi.net/
-https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-2-rest-constraints-129a4b69a582
-https://www.martinfowler.com/articles/richardsonMaturityModel.html
-https://blog.restcase.com/4-maturity-levels-of-rest-api-design/
+- https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+- https://restfulapi.net/
+- https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-2-rest-constraints-129a4b69a582
+- https://www.martinfowler.com/articles/richardsonMaturityModel.html
+- https://blog.restcase.com/4-maturity-levels-of-rest-api-design/
 
 **REST API Design**
 
-https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling
-https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+- https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
 
 **Why no HATEOAS**
 
-Hypermedia as the engine of application state
-https://www.youtube.com/watch?v=6UXc71O7htc
+- Hypermedia as the engine of application state (https://www.youtube.com/watch?v=6UXc71O7htc)
 
 **Best Practices:**
 
-https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/
-https://cloud.google.com/blog/products/api-management/api-design-best-practices-common-pitfalls
+- https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/
+- https://cloud.google.com/blog/products/api-management/api-design-best-practices-common-pitfalls
 
 **Laravel Learning Paths**
 
-https://github.com/LaravelDaily/Laravel-Roadmap-Learning-Path
+- https://github.com/LaravelDaily/Laravel-Roadmap-Learning-Path
 
 **Tasks**
 
@@ -355,7 +352,8 @@ With Pagination and Meta
 
    - `composer require "darkaonline/l5-swagger"`
    - `php artisan l5-swagger:generate`
-   -  Create doc block and Schemas
+   - Create doc block and Schemas
+   - Generate Docs and see: `http://localhost:8000/api/documentation`
 
 - [ ]  Laravel Sail
 

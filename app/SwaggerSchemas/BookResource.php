@@ -30,7 +30,7 @@ class BookResource
      * @OA\Property(
      *      title="Title",
      *      description="Name of the new book",
-     *      example="A nice project"
+     *      example="Sample Book"
      * )
      *
      * @var string
@@ -66,7 +66,7 @@ class BookResource
     /**
      * @OA\Property(
      *      title="Author ID",
-     *      description="Author's id of the new project",
+     *      description="Author's id of the new book",
      *      format="int64",
      *      example=1
      * )
