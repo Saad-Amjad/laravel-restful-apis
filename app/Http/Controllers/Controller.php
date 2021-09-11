@@ -17,7 +17,7 @@ class Controller extends BaseController
      *      title="Laravel RESTful APIs",
      *      description="Example of RESTful APIs",
      *      @OA\Contact(
-     *          email="saad-amjad@monstar-lab.com"
+     *          email="saad.amjad@monstar-lab.com"
      *      ),
      *      @OA\License(
      *          name="Apache 2.0",

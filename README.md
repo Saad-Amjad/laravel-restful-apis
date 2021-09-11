@@ -168,6 +168,12 @@ Principles
     - Laravel Essentials
     - Bootstrapping with Laravel Breeze and JetStream
 
+Examples
+
+- Laravel 8 Demo: https://github.com/Saad-Amjad/laravel8-demo
+- Laravel Breeze: https://github.com/Saad-Amjad/laravel-breeze-demo
+- Laravel Jetstream: https://github.com/Saad-Amjad/laravel-jetstream-demo
+
 ## Task
 
 We want to create an online book store that allows users to browse through different genres of books and then if they
@@ -358,3 +364,4 @@ With Pagination and Meta
 - [ ]  Laravel Sail
 
 - [ ]  JWT
+
