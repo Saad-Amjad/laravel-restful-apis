@@ -139,6 +139,13 @@ return [
         */
         'securityDefinitions' => [
             'securitySchemes' => [
+                'apiAuth' => [ // Unique name of security
+                    'type' => 'http', // The type of the security scheme. Valid values are "basic", "apiKey" or "oauth2".
+                    'description' => 'A short description for security scheme',
+                    'name' => 'Token Based ', // The name of the header or query parameter to be used.
+                    'scheme' => 'bearer',
+                    'in' => 'header', // The location of the API key. Valid values are "query" or "header".
+                ],
                 /*
                  * Examples of Security schemes
                 */
@@ -161,7 +168,6 @@ return [
                     ]
                 ],
                 */
-
                 /* Open API 3.0 support
                 'passport' => [ // Unique name of security
                     'type' => 'oauth2', // The type of the security scheme. Valid values are "basic", "apiKey" or "oauth2".
@@ -205,7 +211,7 @@ return [
         /*
          * Set this to `true` to generate a copy of documentation in yaml format
         */
-        'generate_yaml_copy' => env('L5_SWAGGER_GENERATE_YAML_COPY', false),
+        'generate_yaml_copy' => env('L5_SWAGGER_GENERATE_YAML_COPY', true),
 
         /*
          * Edit to trust the proxy's ip address - needed for AWS Load Balancer
@@ -240,8 +246,8 @@ return [
         /*
          * Uncomment to add constants which can be used in annotations
          */
-        // 'constants' => [
-        // 'L5_SWAGGER_CONST_HOST' => env('L5_SWAGGER_CONST_HOST', 'http://my-default-host.com'),
-        // ],
+         'constants' => [
+            'L5_SWAGGER_CONST_HOST' => env('L5_SWAGGER_CONST_HOST', 'http://localhost:8000'),
+         ],
     ],
 ];

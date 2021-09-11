@@ -14,11 +14,12 @@ class BookController extends Controller
      *      operationId="index",
      *      tags={"Books"},
      *      summary="Get list of books",
-     *      security={{"bearer_token":{}}},
+     *      security={{"apiAuth":{}}},
      *      description="Returns list of books",
      *      @OA\Response(
      *          response=200,
      *          description="Successful operation",
+     *          @OA\JsonContent(ref="#/components/schemas/BookCollection")
      *       ),
      *      @OA\Response(
      *          response=401,

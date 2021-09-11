@@ -1,8 +1,8 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Laravel Restful APIs",
-        "description": "Web Dev Workshop",
+        "title": "Laravel RESTful APIs",
+        "description": "Example of RESTful APIs",
         "contact": {
             "email": "saad-amjad@monstar-lab.com"
         },
@@ -12,6 +12,12 @@
         },
         "version": "1.0.0"
     },
+    "servers": [
+        {
+            "url": "http://localhost:8000",
+            "description": "Demo API Server"
+        }
+    ],
     "paths": {
         "/api/v1/books": {
             "get": {
@@ -23,7 +29,14 @@
                 "operationId": "index",
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BookCollection"
+                                }
+                            }
+                        }
                     },
                     "401": {
                         "description": "Unauthenticated"
@@ -34,7 +47,7 @@
                 },
                 "security": [
                     {
-                        "bearer_token": []
+                        "apiAuth": []
                     }
                 ]
             }
@@ -42,9 +55,27 @@
     },
     "components": {
         "schemas": {
-            "Book": {
-                "title": "Book",
-                "description": "Book model",
+            "BookCollection": {
+                "title": "Book Collection",
+                "description": "Book Collection",
+                "properties": {
+                    "data": {
+                        "title": "Data",
+                        "description": "Data wrapper",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/BookResource"
+                        }
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "BookCollection"
+                }
+            },
+            "BookResource": {
+                "title": "Book Resource",
+                "description": "Book resource",
                 "properties": {
                     "id": {
                         "title": "ID",
@@ -83,8 +114,17 @@
                 },
                 "type": "object",
                 "xml": {
-                    "name": "Book"
+                    "name": "BookResource"
                 }
+            }
+        },
+        "securitySchemes": {
+            "apiAuth": {
+                "type": "http",
+                "description": "A short description for security scheme",
+                "name": "Token Based ",
+                "scheme": "bearer",
+                "in": "header"
             }
         }
     },

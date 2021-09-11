@@ -1,15 +1,17 @@
 <?php
 
+namespace App\SwaggerSchemas;
+
 /**
  * @OA\Schema(
- *     title="Book",
- *     description="Book model",
+ *     title="Book Resource",
+ *     description="Book resource",
  *     @OA\Xml(
- *         name="Book"
+ *         name="BookResource"
  *     )
  * )
  */
-class Book
+class BookResource
 {
 
     /**

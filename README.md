@@ -121,7 +121,9 @@ Open API Specification: https://swagger.io/tools/swagger-editor/
 
 ## PHP
 
-Programming Language: Interpreted Create a file named: index.php Drop this code snippet:
+- Create a file named: index.php.
+
+- Drop this code snippet:
 
 ```html
 <!DOCTYPE html>
@@ -135,11 +137,13 @@ echo "Hello World!<br>";
 </html>
 ```
 
-Requires a web server to run its code. Comes with a built in server, when you install PHP.
+- Requires a web server to run its code.
 
-And then run the following command:
+- Comes with a built in server, when you install PHP.
 
-`php -S localhost:3000 index.php`
+- And then run the following command:
+
+  `php -S localhost:3000 index.php`
 
 In order to create web applications, and to have the best practises for reusuable scalable and maintainable PHP code, we
 resort to PHP frameworks.
@@ -160,8 +164,12 @@ Benefits of Framework:
 
 - Easily maintainable applications.
 
-Principles:
-Model View Controller Laravel Codebase Laravel Essentials Bootstrapping with Laravel Breeze JetStream
+Principles
+
+    - Model View Controller
+    - Laravel Codebase
+    - Laravel Essentials
+    - Bootstrapping with Laravel Breeze and JetStream
 
 ## Task
 
@@ -192,7 +200,86 @@ Sample GET Books API Task
 }
 
 ```
+With Pagination and Meta
 
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "Compatible exuding software as",
+      "book_url": "api\/v1\/books\/1",
+      "author": "Bethany Funk III",
+      "author_url": "api\/v1\/authors\/1"
+    },
+    {
+      "id": 2,
+      "title": "Open-source asynchronous encoding",
+      "book_url": "api\/v1\/books\/2",
+      "author": "Bethany Funk III",
+      "author_url": "api\/v1\/authors\/1"
+    },
+    {
+      "id": 3,
+      "title": "Configurable regional budgetarymanagement",
+      "book_url": "api\/v1\/books\/3",
+      "author": "Verona Lubowitz",
+      "author_url": "api\/v1\/authors\/2"
+    },
+    {
+      "id": 4,
+      "title": "Ergonomic actuating support",
+      "book_url": "api\/v1\/books\/4",
+      "author": "Verona Lubowitz",
+      "author_url": "api\/v1\/authors\/2"
+    },
+    {
+      "id": 5,
+      "title": "Business-focused bifurcated help-desk",
+      "book_url": "api\/v1\/books\/5",
+      "author": "Gerda Dare I",
+      "author_url": "api\/v1\/authors\/3"
+    }
+  ],
+  "links": {
+    "first": "http:\/\/localhost:8000\/api\/v1\/books?page=1",
+    "last": "http:\/\/localhost:8000\/api\/v1\/books?page=2",
+    "prev": null,
+    "next": "http:\/\/localhost:8000\/api\/v1\/books?page=2"
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 2,
+    "links": [
+      {
+        "url": null,
+        "label": "&laquo; Previous",
+        "active": false
+      },
+      {
+        "url": "http:\/\/localhost:8000\/api\/v1\/books?page=1",
+        "label": "1",
+        "active": true
+      },
+      {
+        "url": "http:\/\/localhost:8000\/api\/v1\/books?page=2",
+        "label": "2",
+        "active": false
+      },
+      {
+        "url": "http:\/\/localhost:8000\/api\/v1\/books?page=2",
+        "label": "Next &raquo;",
+        "active": false
+      }
+    ],
+    "path": "http:\/\/localhost:8000\/api\/v1\/books",
+    "per_page": 5,
+    "to": 5,
+    "total": 10
+  }
+}
+```
 ## Todos / Steps
 
 - [x] Installation
@@ -256,4 +343,7 @@ Sample GET Books API Task
 - [x]  Cache
 
 - [x]  Swagger lumen
+
+    - php artisan l5-swagger:generate
+
 

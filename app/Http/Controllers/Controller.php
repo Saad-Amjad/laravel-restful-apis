@@ -14,8 +14,8 @@ class Controller extends BaseController
     /**
      * @OA\Info(
      *      version="1.0.0",
-     *      title="Laravel Restful APIs",
-     *      description="Web Dev Workshop",
+     *      title="Laravel RESTful APIs",
+     *      description="Example of RESTful APIs",
      *      @OA\Contact(
      *          email="saad-amjad@monstar-lab.com"
      *      ),
@@ -24,10 +24,9 @@ class Controller extends BaseController
      *          url="http://www.apache.org/licenses/LICENSE-2.0.html"
      *      ),
      * )
-     * @OAS\SecurityScheme(
-     *      securityScheme="bearer_token",
-     *      type="http",
-     *      scheme="bearer"
+     * @OA\Server(
+     *      url=L5_SWAGGER_CONST_HOST,
+     *      description="Demo API Server"
      * )
      * @OA\Tag(
      *     name="Books",
