@@ -17,7 +17,7 @@ class LoginResponse
     /**
      * @OA\Property(
      *     title="accessToken",
-     *     description="ID",
+     *     description="Access Token",
      *     example= "4|IZ95yiIqqCVsfT2rmWnnxbAwhlO2zz2Mz3dstUw8"
      * )
      *

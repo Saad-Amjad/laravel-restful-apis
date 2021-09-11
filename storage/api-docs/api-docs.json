@@ -193,7 +193,7 @@
                 "properties": {
                     "access_token": {
                         "title": "accessToken",
-                        "description": "ID",
+                        "description": "Access Token",
                         "type": "string",
                         "example": "4|IZ95yiIqqCVsfT2rmWnnxbAwhlO2zz2Mz3dstUw8"
                     },
@@ -279,7 +279,7 @@
                         "title": "password",
                         "description": "password",
                         "type": "string",
-                        "example": "#@asdf342f"
+                        "example": "password123"
                     }
                 },
                 "type": "object"
