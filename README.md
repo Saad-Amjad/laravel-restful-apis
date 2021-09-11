@@ -329,14 +329,23 @@ With Pagination and Meta
     - `php artisan make:resource BookCollection`
 
 - [x]  Feature Tests
+    
+    - `php artisan make:test BookTest`
+    - Run: `./vendor/bin/phpunit`
 
-- [x]  Install Sanctum
+
+- [x] [Optional] Install Sanctum
 
     - Optional: Install sanctum
       `composer require laravel/sanctum`
     - Enable sanctum
     - Enable middleware
+
+- [x]  [Optional] Login / Register Routes
+    
     - Create AuthController
+    - Register Api
+    - Login Api
 
 - [x]  Predis
 
@@ -344,6 +353,10 @@ With Pagination and Meta
 
 - [x]  Swagger lumen
 
-    - php artisan l5-swagger:generate
+   - `composer require "darkaonline/l5-swagger"`
+   - `php artisan l5-swagger:generate`
+   -  Create doc block and Schemas
 
+- [ ]  Laravel Sail
 
+- [ ]  JWT
