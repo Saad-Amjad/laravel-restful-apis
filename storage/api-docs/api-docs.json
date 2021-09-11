@@ -19,6 +19,41 @@
         }
     ],
     "paths": {
+        "/api/v1/register": {
+            "post": {
+                "tags": [
+                    "Register"
+                ],
+                "summary": "Register user",
+                "description": "Registers user in the system",
+                "operationId": "register",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreRegisterRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RegisterResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                }
+            }
+        },
         "/api/v1/books": {
             "get": {
                 "tags": [
@@ -116,6 +151,58 @@
                 "xml": {
                     "name": "BookResource"
                 }
+            },
+            "RegisterResponse": {
+                "title": "Register Response",
+                "description": "Register Response",
+                "properties": {
+                    "access_token": {
+                        "title": "accessToken",
+                        "description": "ID",
+                        "type": "string",
+                        "example": "4|IZ95yiIqqCVsfT2rmWnnxbAwhlO2zz2Mz3dstUw8"
+                    },
+                    "token_type": {
+                        "title": "Token Type",
+                        "description": "Type of Token",
+                        "type": "string",
+                        "example": "Bearer"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "RegisterResponse"
+                }
+            },
+            "StoreRegisterRequest": {
+                "title": "Store Register Request",
+                "description": "Store register request body data",
+                "required": [
+                    "name",
+                    "email",
+                    "password"
+                ],
+                "properties": {
+                    "name": {
+                        "title": "name",
+                        "description": "Name of the new user",
+                        "type": "string",
+                        "example": "Saad Bin Amjad"
+                    },
+                    "email": {
+                        "title": "email",
+                        "description": "Email of user",
+                        "type": "string",
+                        "example": "saad.amjad@monstar-lab.com"
+                    },
+                    "password": {
+                        "title": "password",
+                        "description": "password",
+                        "type": "string",
+                        "example": "#@asdf342f"
+                    }
+                },
+                "type": "object"
             }
         },
         "securitySchemes": {
