@@ -7,7 +7,10 @@ use App\Models\Author;
 
 class AuthorController extends Controller
 {
+
     /**
+     *
+     * TODO Doc Block
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
