@@ -1,64 +1,259 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# RESTful APIs using Laravel
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Introduction**
 
-## About Laravel
+**Pre Workshop Webinar:**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Introduction to Advanced Web Development
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Slides**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+https://slides.com/saadbinamjad/intro-to-advanced-web-development
 
-## Learning Laravel
+**Video**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+[**https://www.facebook.com/watch/?v=34735400019038**](https://www.facebook.com/watch/?v=347354000190387)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Workshop Structure**
 
-## Laravel Sponsors
+Session 1
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Workshop Introduction
+- RESTful API Concepts
+- RESTful API Design
 
-### Premium Partners
+Session 2
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+- Laravel Essentials
+- Bootstrapping with Laravel
 
-## Contributing
+Session 3
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Building RESTful APIs
+- Open API Specification
+- Coding Tasks.
 
-## Code of Conduct
+Session 4
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Code Review
+- Solution Discussion.
 
-## Security Vulnerabilities
+**Playground**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Whimsical
 
-## License
+https://whimsical.com/restful-api-design-CjrjT2QFVfnrVfJxSCCSbW
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Password: web-dev-workshop
+
+Local Playground:
+
+https://github.com/typicode/json-server
+
+Postman or Insomnia
+
+**Reading Materials**
+
+**API**
+
+https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces
+https://stoplight.io/api-types/
+Eg: https://api.ratings.food.gov.uk/Help/Index
+Eg: https://docs.github.com/en/rest
+
+**HTTP**
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+https://www.freshblurbs.com/blog/2013/12/03/web-hypermedia-apis-node.html
+
+**REST**
+
+https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+https://restfulapi.net/
+https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-2-rest-constraints-129a4b69a582
+https://www.martinfowler.com/articles/richardsonMaturityModel.html
+https://blog.restcase.com/4-maturity-levels-of-rest-api-design/
+
+**REST API Design**
+
+https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+
+**Why no HATEOAS**
+
+Hypermedia as the engine of application state
+https://www.youtube.com/watch?v=6UXc71O7htc
+
+**Best Practices:**
+
+https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/
+https://cloud.google.com/blog/products/api-management/api-design-best-practices-common-pitfalls
+
+**Laravel Learning Paths**
+
+https://github.com/LaravelDaily/Laravel-Roadmap-Learning-Path
+
+**Tasks**
+
+We want to create an online book store that allows users to browse through different genres of books and then if they
+want to purchase it, they need to sign in the system and order for their copy. The Admin, the store owner, can see the
+orders and then decide to ship them according to the user addresses.
+
+**Pre-requisites**
+
+**Git**
+
+**Github Account**
+
+**With Docker**
+
+Docker: https://docs.docker.com/get-docker/
+
+Code Editor: like VSCode or get the free trail version of PHPStorm,
+
+**Without Docker**
+
+If no docker, then you have to install Composer, PHP (Preferred PHP 8, PHP 7.4 would also do), MySQL, Git, Redis.
+
+Open API Specification: https://swagger.io/tools/swagger-editor/
+
+****
+
+## PHP
+
+Programming Language: Interpreted Create a file named: index.php Drop this code snippet:
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Saad</h1>
+<?php
+echo "Hello World!<br>";
+?>
+</body>
+</html>
+```
+
+Requires a web server to run its code. Comes with a built in server, when you install PHP.
+
+And then run the following command:
+
+`php -S localhost:3000 index.php`
+
+In order to create web applications, and to have the best practises for reusuable scalable and maintainable PHP code, we
+resort to PHP frameworks.
+
+## Laravel
+
+Benefits of Framework:
+
+- Out-of-the-box application architecture.
+
+- Faster development.
+
+- Highly testable.
+
+- Scalable
+
+- Loosely coupled
+
+- Easily maintainable applications.
+
+Principles:
+Model View Controller Laravel Codebase Laravel Essentials Bootstrapping with Laravel Breeze JetStream
+
+## Task
+
+We want to create an online book store that allows users to browse through different genres of books and then if they
+want to purchase it, they need to sign in the system and order for their copy. The Admin, the store owner, can see the
+orders and then decide to ship them according to the user addresses.
+
+Sample GET Books API Task
+
+```json
+{
+    "books": [
+        {
+            "title": "demo 1",
+            "author": "saad1",
+            "id": 1,
+            "book_url": "api/v1/books/1",
+            "author_url": "api/v1/authors/saad1"
+        },
+        {
+            "title": "demo 2",
+            "author": "saad2",
+            "id": 2,
+            "book_url": "api/v1/books/2",
+            "author_url": "api/v1/authors/saad2"
+        }
+    ]
+}
+
+```
+
+## Todos / Steps
+
+- [x] Installation
+
+    - Steps: https://laravel.com/docs/8.x/installation
+
+- [x] Design APIs (see above task)
+
+- [x] Migration
+
+    - `php artisan make:migration create_books_table`
+    - `php artisan make:migration create_authors_table`
+
+- [x] Relationships
+
+    - `php artisan make:migration add_fk_to_books_table`
+
+- [x] Models
+
+    - `php artisan make:model Book`
+    - `php artisan make:model Author`
+
+- [x] Model Relationship
+
+    - Author hasMany Books.
+    - Books BelongsTo author.
+
+- [x] Controllers
+
+    - `php artisan make:controller BookController`
+    - `php artisan make:controller AuthorController`
+
+- [x] Create Routes
+
+- [x] Create Factory
+
+    - `php artisan make:factory AuthorFactory`
+    - `php artisan make:factory BookFactory`
+
+- [x] Create Seeder
+
+    - `php artisan db:seed`
+
+- [x] Create Resource
+
+    - `php artisan make:resource BookResource`
+    - `php artisan make:resource BookCollection`
+
+- [x]  Feature Tests
+
+- [x]  Install Sanctum
+
+    - Optional: Install sanctum
+      `composer require laravel/sanctum`
+    - Enable sanctum
+    - Enable middleware
+    - Create AuthController
+
+- [x]  Predis
+
+- [x]  Cache
+
+- [x]  Swagger lumen
+
