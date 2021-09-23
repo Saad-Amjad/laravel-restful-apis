@@ -15,11 +15,13 @@ use App\Http\Controllers\AuthController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::post('/v1/register', [AuthController::class, 'register']);
-Route::post('/v1/login', [AuthController::class, 'login']);
+/**
+ * need not use / before  url name. good to user name of the route
+ */
+Route::post('v1/register', [AuthController::class, 'register'])->name('users.registration');
+Route::post('v1/login', [AuthController::class, 'login']);
 
 Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
-    Route::get('/books', [BookController::class, 'index']);
-    Route::get('/authors', [AuthorController::class, 'index']);
+    Route::get('books', [BookController::class, 'index']);
+    Route::get('authors', [AuthorController::class, 'index']);
 });
