@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Repository\Constracts\LoginRegistrationContract;
+use App\Http\Requests\RegistrationFormValidationRequest;
+use App\Http\Service\LoginRegistrationService;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -33,33 +36,30 @@ class AuthController extends Controller
      *     )
      *
      */
+
+    protected $loginRegistrationContract;
+    protected $loginRegistrationService;
+
+    /**
+     * @param LoginRegistrationContract $loginRegistrationContract
+     * @param LoginRegistrationService $loginRegistrationService
+     */
+    public function __construct(LoginRegistrationContract $loginRegistrationContract, LoginRegistrationService $loginRegistrationService)
+    {
+        $this->loginRegistrationContract = $loginRegistrationContract;
+        $this->loginRegistrationService = $loginRegistrationService;
+    }
+
     /*
     * Register
      *
      * @return \Illuminate\Http\JsonResponse
+     * make the validation outside the controller
      */
-    public function register(Request $request): JsonResponse
+    public function register(RegistrationFormValidationRequest $request): JsonResponse
     {
-        $data = $request->validate([
-           'name' => 'required|string',
-           'email' => 'required|email',
-           'password' => 'required',
-        ]);
-
-        /* @var \App\Models\User $user */
-        $user = User::where('email', $request->email)->first();
-
-        if ($user) {
-            return response()->json(null, Response::HTTP_BAD_REQUEST);
-        }
-
-        $user = User::create([
-             'name' => $data['name'],
-             'email' => $data['email'],
-             'password' => Hash::make($data['password']),
-        ]);
-
-        $token = $user->createToken('auth_token')->plainTextToken;
+        $user =  $this->loginRegistrationContract->requestUserCheck($request->email);
+        $token = $this->loginRegistrationService->requestUserInsert($user,$request->all());
         return response()->json([
             'access_token' => $token,
             'token_type' => 'Bearer',
@@ -96,20 +96,8 @@ class AuthController extends Controller
      */
     public function login(Request $request): JsonResponse
     {
-        $request->validate([
-           'email' => 'required|email',
-           'password' => 'required',
-        ]);
-
-        /* @var \App\Models\User $user */
-        $user = User::where('email', $request->email)->first();
-
-        if ($user && !Hash::check($request->password, $user->password)) {
-            response()->json(null, Response::HTTP_UNAUTHORIZED);
-        }
-
-        $token = $user->createToken('auth_token')->plainTextToken;
-
+        $user =  $this->loginRegistrationContract->requestUserCheck($request->email);
+        $token = $this->loginRegistrationContract->checkUserExistance($user,$request->all());
         return response()->json([
             'access_token' => $token,
             'token_type' => 'Bearer',
